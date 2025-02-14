@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -41,7 +41,7 @@ li {
     border-radius: 60%;
 }
 
-.headerLogo h1 {
+.headerLogo h2 {
     font-size: 30px;
     text-transform: uppercase;
 }
@@ -50,13 +50,14 @@ li {
     font-size: 47px;
     font-weight: 700;
     padding-bottom: 10px;
+    text-shadow: 0 0 15px grey;
 }
 
 .headerBtn {
     margin: 5px;
     padding: 12px 22px;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     background-color: #ebd9a5;
     font-size: 22px;
     cursor: pointer;
@@ -72,13 +73,12 @@ li {
 }
 
 .headerBtnLink {
-    text-decoration: none;
     color: #333;
 }
 
 .headerHome {
     background: url(./assets/bg.jpg) center/cover no-repeat;
-    padding: 250px 0 250px 0;
+    padding: 150px 0;
 }
 
 .descriptions {
@@ -121,13 +121,13 @@ li {
 }
 
 .infoItemIcon {
-    width: 53px;
-    height: 53px;
+    width: 60px;
+    height: 60px;
     stroke: #fff;
 }
 
 .infoItemDescription {
-    font-size: 18px;
+    font-size: 19px;
 }
 
 .footerContainer {
@@ -179,11 +179,44 @@ li {
     color: #fff;
 }
 
-@media screen and (max-width: 768px){
-    .headerText{
+.serviceInfo {
+    position: relative;
+    background:
+            linear-gradient(
+                    to top,
+                    rgba(0, 0, 0, 0.7),
+                    rgba(0, 0, 0, 0.2)
+            ),
+            url(./assets/serviceInfoBG.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    height: 350px;
+}
+
+.serviceInfoText {
+    max-width: 1280px;
+    width: 75%;
+    position: absolute;
+    color: white;
+    font-size: 30px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: justify;
+}
+
+@media screen and (max-width: 768px) {
+    .headerText {
         font-size: 30px;
     }
-    .headerBtn{
+
+    .headerBtn {
         font-size: 17px;
+    }
+
+    .serviceInfoText {
+        font-size: 20px;
     }
 }
