@@ -1,21 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #f5f5f5;
+    background-color: #333;
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
 }
 
 .header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 0;
-    text-align: center;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
 }
 
 .headerLogo {
@@ -24,6 +33,7 @@ body {
     align-items: center;
     gap: 20px;
     padding-bottom: 10px;
+
 }
 
 .headerLogo img {
@@ -31,7 +41,7 @@ body {
     border-radius: 60%;
 }
 
-.headerLogo h1 {
+.headerLogo h2 {
     font-size: 30px;
     text-transform: uppercase;
 }
@@ -40,6 +50,7 @@ body {
     font-size: 47px;
     font-weight: 700;
     padding-bottom: 10px;
+    text-shadow: 0 0 15px grey;
 }
 
 .headerBtn {
@@ -57,23 +68,126 @@ body {
     background-color: #333;
 }
 
-.headerBtnLink {
-    color: #333;
-    text-decoration: none;
+.headerBtn:hover .headerBtnLink {
+    color: #fff;
 }
 
-.headerBtnLink:hover {
-    color: #fff;
+.headerBtnLink {
+    color: #333;
 }
 
 .headerHome {
     background: url(./assets/bg.jpg) center/cover no-repeat;
-    padding: 250px 0 250px 0;
+    padding: 150px 0;
+}
+
+.descriptions {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    text-align: center;
+}
+
+.infoBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+}
+
+.infoTitle {
+    font-size: 26px;
+    font-weight: 500;
+}
+
+.infoItems {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.infoItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.infoItemTitle {
+    font-size: 20px;
+}
+
+.infoItemIcon {
+    width: 60px;
+    height: 60px;
+    stroke: #fff;
+}
+
+.infoItemDescription {
+    font-size: 19px;
+}
+
+.footerContainer {
+    width: 100%;
+    padding: 40px 30px 20px ;
+}
+
+.socialIcons {
+    display: flex;
+    justify-content: center;
+}
+
+.socialIcons a {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 30px;
+    background-color: #fff;
+    margin: 10px;
+    border-radius: 50%;
+}
+
+.socialIcons a i {
+    font-size: 3em;
+    color: black;
+    opacity: 0.9;
+}
+
+.socialIcons a:hover {
+    background-color: #111;
+    transition: 0.3s;
+}
+
+.socialIcons a:hover i {
+    color: #fff;
+    transition: 0.3s;
+}
+
+.footerBottom {
+    background-color: #000;
+    padding: 20px;
+    text-align: center;
+}
+
+.footerBottom p {
+    color: #fff;
 }
 
 .serviceInfo {
     position: relative;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.2)), url(./assets/serviceInfoBG.png);
+    background:
+            linear-gradient(
+                    to top,
+                    rgba(0, 0, 0, 0.7),
+                    rgba(0, 0, 0, 0.2)
+            ),
+            url(./assets/serviceInfoBG.png);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -82,6 +196,7 @@ body {
 }
 
 .serviceInfoText {
+    max-width: 1280px;
     width: 75%;
     position: absolute;
     color: white;
@@ -102,6 +217,6 @@ body {
     }
 
     .serviceInfoText {
-        font-size: 28px;
+        font-size: 20px;
     }
 }
