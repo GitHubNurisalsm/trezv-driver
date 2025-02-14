@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.serviceInfo {
+    position: relative;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.2)), url("images/serviceInfoBG.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    height: 350px;
+}
+
+.serviceInfoText {
+    width: 75%;
+    position: absolute;
+    color: white;
+    font-size: 32px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: justify;
+}
+
+@media screen and (max-width: 768px) {
+    .serviceInfoText {
+        font-size: 30px;
+    }
+}
