@@ -145,9 +145,8 @@ li {
 .socialIcons a {
     width: 50px;
     height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: relative;
+    display: block;
     text-decoration: none;
     padding: 30px;
     background-color: #fff;
@@ -155,9 +154,19 @@ li {
     border-radius: 50%;
 }
 
-.socialIcons a i {
+.socialIcons a i,
+.socialIcons a div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     font-size: 3em;
     color: black;
+}
+
+.socialIcons .twoGisIcon div {
+    width: 50px;
+    height: 50px;
 }
 
 .socialIcons a:hover {
@@ -168,6 +177,14 @@ li {
 .socialIcons a:hover i {
     color: #fff;
     transition: 0.3s;
+}
+
+.socialIcons a svg {
+    fill: #000;
+}
+
+.socialIcons a:hover svg {
+    fill: #fff;
 }
 
 .footerBottom {
